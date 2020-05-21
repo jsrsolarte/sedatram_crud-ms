@@ -15,4 +15,8 @@ export class PeopleService {
         return await this.peopleRepository.find()
     }
 
+    async save(person: People){
+        await this.peopleRepository.save(person)
+    }
+
 }

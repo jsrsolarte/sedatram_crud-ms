@@ -1,13 +1,18 @@
-import { Entity, Column, PrimaryColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity("people")
+@Entity('people')
 export class People {
-    @PrimaryColumn()
-    id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column({ unique: true })
-    idNumber: string;
+  @Column({ unique: true })
+  idNumber: string;
 
-    @Column()
-    names: string;
+  @Column()
+  names: string;
+
+  constructor(idNumber: string, names: string) {
+    this.idNumber = idNumber;
+    this.names = names;
+  }
 }
