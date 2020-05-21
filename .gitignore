@@ -29,4 +29,3 @@ lerna-debug.log*
 # IDE - VSCode
 .vscode/*
 .env
-Dockerfile
