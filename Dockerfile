@@ -16,9 +16,9 @@ FROM node:10-alpine
 WORKDIR /app
 ENV TYPEORM_USERNAME sedatram
 ENV TYPEORM_PASSWORD sedatram.2020
-ENV TYPEORM_HOST mysql
+ENV TYPEORM_HOST localhost
 ENV TYPEORM_PORT 3306
 ENV TYPEORM_DATABASE sedatram
 COPY --from=builder /app ./
 EXPOSE 3000
-CMD ["npm", "run", "start:prod"]
+CMD npm run start:prod
