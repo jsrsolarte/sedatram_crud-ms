@@ -21,6 +21,7 @@ export class People {
   @Column()
   lastNames: string;
 
+
   @CreateDateColumn({ name: 'created_at', nullable: false })
   createdAt: Date;
 
@@ -29,7 +30,7 @@ export class People {
 
   create(person: PersonDTO) {
     this.idNumber = person.idNumber;
-    this.modify(person);
+    this.modify(person)
   }
 
   modify(person: PersonDTO) {

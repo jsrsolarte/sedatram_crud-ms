@@ -1,5 +1,6 @@
 export default {
   type: 'mysql',
+  timezone: process.env.TYPEORM_TIMEZONE,
   host: process.env.TYPEORM_HOST,
   username: process.env.TYPEORM_USERNAME,
   password: process.env.TYPEORM_PASSWORD,
